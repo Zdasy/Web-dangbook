@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>书籍数据可视化展示</title>
+    <link rel="stylesheet" href="data/styles.css" />
+    <!-- 引入 ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- 引入词云库 -->
+    <script src="https://cdn.jsdelivr.net/npm/wordcloud2/src/wordcloud2.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>书籍数据可视化展示</h1>
+      <!-- 搜索框 -->
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="搜索书籍..." />
+        <button id="searchBtn">搜索</button>
+      </div>
+
+      <!-- 图表展示区域 -->
+      <div class="charts-container">
+        <div class="card">
+          <h2>🏛️ 出版社图书数量 Top10</h2>
+          <div id="pubChart" class="chart"></div>
+        </div>
+
+        <div class="card">
+          <h2>💰 图书价格分布</h2>
+          <div id="priceChart" class="chart"></div>
+        </div>
+
+        <div class="card">
+          <h2>🎯 折扣比例分布</h2>
+          <div id="discountGroupChart" class="chart"></div>
+        </div>
+
+        <div class="card">
+          <h2>👥 作者词云图</h2>
+          <div id="wordcloud"></div>
+        </div>
+      </div>
+
+      <!-- 书籍列表 -->
+      <div class="books-container">
+        <!-- 书籍卡片将通过 JavaScript 动态生成 -->
+      </div>
+    </div>
+
+    <script src="data/script.js"></script>
+  </body>
+</html>
